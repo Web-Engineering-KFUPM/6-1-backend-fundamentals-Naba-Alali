@@ -34,6 +34,14 @@ app.get('/about', (req, res) => {
 
 
 // TODO 7: Create the "/student" route
+app.get('/student', (req, res) => {
+  const student = {
+    name: 'Naba Alali',
+    major: 'Software Engineer'
+  };
+  res.json(student);
+});
+
 
 
 
