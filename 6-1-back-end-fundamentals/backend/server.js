@@ -10,10 +10,7 @@ const app = express();
 
 
 // TODO 3: Allow React to access the server
-app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  next();
-});
+app.use(cors());
 
 
 
@@ -35,11 +32,10 @@ app.get('/about', (req, res) => {
 
 // TODO 7: Create the "/student" route
 app.get('/student', (req, res) => {
-  const student = {
+  res.json({
     name: 'Naba Alali',
-    major: 'Software Engineer'
-  };
-  res.json(student);
+    major: 'Software Engineering',
+  });
 });
 
 
